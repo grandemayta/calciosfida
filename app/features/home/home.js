@@ -6,8 +6,9 @@
 
 "use strict";
 
-import React                                from "react-native";
-import { Text, View }                       from "react-native";
+import React                                         from "react-native";
+import { Text, View }                                from "react-native";
+import { Header, Button, Spacer }                    from "../../components";
 
 
 class Home extends React.Component {
@@ -15,7 +16,13 @@ class Home extends React.Component {
     render() {
         return (
             <View>
-                <Text>Test</Text>
+                <Header text="Home"/>
+                <Spacer value="100"/>
+                <Button text="Profilo"/>
+                <Spacer value="30"/>
+                <Button text="Squadra"/>
+                <Spacer value="30"/>
+                <Button text="Sfide"/>
             </View>
         );
     };
