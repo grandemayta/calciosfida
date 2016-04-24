@@ -18,7 +18,7 @@ class Home extends React.Component {
             <View>
                 <Header text="Home"/>
                 <Spacer value="100"/>
-                <Button text="Profilo"/>
+                <Button page="profile" navigator={this.props.navigator} text="Profilo"/>
                 <Spacer value="30"/>
                 <Button text="Squadra"/>
                 <Spacer value="30"/>

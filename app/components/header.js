@@ -8,30 +8,18 @@
 
 import React                                                      from "react-native";
 import { StyleSheet, View,  Text }                                from "react-native";
-
-
-let Style = StyleSheet.create({
-    default: {
-        alignSelf: "stretch",
-        height: 60,
-        paddingTop: 20,
-        backgroundColor: "#03A9F4"
-    },
-    text: {
-        marginTop: 6,
-        color: "#FFFFFF",
-        textAlign: "center",
-        fontSize: 20
-    }
-});
+import HeaderStyle                                                from "../styles/header";
+import Icon                                                       from "react-native-vector-icons/FontAwesome";
 
 
 class Header extends React.Component {
 
     render() {
         return (
-            <View style={Style.default}>
-                <Text style={Style.text}>{this.props.text}</Text>
+            <View style={HeaderStyle.default}>
+                <Text style={HeaderStyle.text}>{this.props.text}</Text>
+                <Icon style={HeaderStyle.backButton} name="chevron-left" size={26} color="#FFFFFF"/>
+                <Icon style={HeaderStyle.menuButton} name="bars" size={26} color="#FFFFFF"/>
             </View>
         );
     };

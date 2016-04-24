@@ -8,31 +8,28 @@
 
 import React                                                      from "react-native";
 import { StyleSheet, TouchableOpacity, Text }                     from "react-native";
-
-
-let Style = StyleSheet.create({
-    btn: {
-        alignSelf: "center",
-        width: 200,
-        paddingTop: 20,
-        paddingBottom: 20,
-        borderRadius: 2,
-        backgroundColor: "#4CAF50"
-    },
-    text: {
-        color: "#FFFFFF",
-        textAlign: "center",
-        fontSize: 18
-    }
-});
+import ButtonStyle                                                from "../styles/button";
 
 
 class Button extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            page: props.page,
+            navigator: props.navigator
+        };
+
+    };
+
+    handleNavigation() {
+        this.state.navigator.push({id: this.state.page});
+    };
+
     render() {
         return (
-            <TouchableOpacity style={Style.btn}>
-                <Text style={Style.text}>{this.props.text}</Text>
+            <TouchableOpacity onPress={this.handleNavigation.bind(this)} style={ButtonStyle.btn}>
+                <Text style={ButtonStyle.text}>{this.props.text}</Text>
             </TouchableOpacity>
         );
     };
