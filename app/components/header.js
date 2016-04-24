@@ -16,9 +16,9 @@ class Header extends React.Component {
 
     render() {
         return (
-            <View style={HeaderStyle.default}>
-                <Text style={HeaderStyle.text}>{this.props.text}</Text>
+            <View style={HeaderStyle.container}>
                 <Icon style={HeaderStyle.backButton} name="chevron-left" size={26} color="#FFFFFF"/>
+                <Text style={HeaderStyle.text}>{this.props.text}</Text>
                 <Icon style={HeaderStyle.menuButton} name="bars" size={26} color="#FFFFFF"/>
             </View>
         );

@@ -11,29 +11,29 @@ import { StyleSheet }               from "react-native";
 
 
 let HeaderStyle = StyleSheet.create({
-    default: {
+    container: {
         flex: 1,
         flexDirection: "row",
+        alignItems: "center",
         height: 60,
         paddingTop: 20,
         backgroundColor: "#03A9F4"
     },
     text: {
-        flex: 1,
-        marginTop: 6,
+        flex: 6,
+        alignItems: "center",
         color: "#FFFFFF",
         textAlign: "center",
         fontSize: 20
     },
     backButton: {
-        position: "absolute",
-        paddingTop: 6,
-        left: 10
+        flex: 1,
+        paddingLeft: 10
     },
     menuButton: {
-        position: "absolute",
-        paddingTop: 6,
-        right: 10
+        flex: 1,
+        textAlign: "right",
+        paddingRight: 10
     }
 });
 

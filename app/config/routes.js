@@ -16,8 +16,6 @@ class Routes extends React.Component {
 
         console.log("currentRoute", route);
 
-        console.log(Features);
-
         switch (route.id) {
             case "home":
                 return <Features.Home navigator={navigator}/>;
