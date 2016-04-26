@@ -16,10 +16,12 @@ class Header extends React.Component {
 
     render() {
         return (
-            <View style={HeaderStyle.container}>
-                <Icon style={HeaderStyle.backButton} name="chevron-left" size={26} color="#FFFFFF"/>
-                <Text style={HeaderStyle.text}>{this.props.text}</Text>
-                <Icon style={HeaderStyle.menuButton} name="bars" size={26} color="#FFFFFF"/>
+            <View>
+                <View style={HeaderStyle.container}>
+                    <Icon style={HeaderStyle.button} name="chevron-left" size={26} color="#FFFFFF"/>
+                    <Text style={HeaderStyle.text}>{this.props.text}</Text>
+                    <Icon style={HeaderStyle.button} name="bars" size={26} color="#FFFFFF"/>
+                </View>
             </View>
         );
     };

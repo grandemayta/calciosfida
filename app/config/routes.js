@@ -20,7 +20,7 @@ class Routes extends React.Component {
             case "home":
                 return <Features.Home navigator={navigator}/>;
             case "profile":
-                return <Features.Profile navigator={navigator}/>;
+                return <Features.TabProfile navigator={navigator}/>;
             default:
                 return <Features.Home navigator={navigator}/>;
         }

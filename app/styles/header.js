@@ -20,20 +20,15 @@ let HeaderStyle = StyleSheet.create({
         backgroundColor: "#03A9F4"
     },
     text: {
-        flex: 6,
+        flex: 1,
         alignItems: "center",
         color: "#FFFFFF",
         textAlign: "center",
         fontSize: 20
     },
-    backButton: {
-        flex: 1,
-        paddingLeft: 10
-    },
-    menuButton: {
-        flex: 1,
-        textAlign: "right",
-        paddingRight: 10
+    button: {
+        width: 50,
+        textAlign: "center"
     }
 });
 
