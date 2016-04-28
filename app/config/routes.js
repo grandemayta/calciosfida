@@ -7,28 +7,21 @@
 "use strict";
 
 import React                                from "react-native";
-import { Navigator }                        from "react-native";
+import { Scene, Router }                    from "react-native-router-flux";
 import * as Features                        from "../features";
+import { Header }                           from "../components/widgets";
+
 
 class Routes extends React.Component {
 
-    currentRoute(route, navigator) {
-
-        console.log("currentRoute", route);
-
-        switch (route.id) {
-            case "home":
-                return <Features.Home navigator={navigator}/>;
-            case "profile":
-                return <Features.TabProfile navigator={navigator}/>;
-            default:
-                return <Features.Home navigator={navigator}/>;
-        }
-    };
-
     render() {
         return (
-            <Navigator initialRoute={{id: "home"}} renderScene={this.currentRoute}/>
+            <Router>
+                <Scene key="root" hideNavBar="true">
+                    <Scene key="home" component={Features.Home}/>
+                    <Scene key="profile" component={Features.TabProfile}/>
+                </Scene>
+            </Router>
         );
     };
 

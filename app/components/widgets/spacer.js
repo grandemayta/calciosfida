@@ -8,7 +8,7 @@
 
 import React                                                      from "react-native";
 import { StyleSheet, View }                                       from "react-native";
-import SpacerStyle                                                from "../styles/spacer";
+import { SpacerStyle }                                            from "../../styles/widgets";
 
 
 class Spacer extends React.Component {

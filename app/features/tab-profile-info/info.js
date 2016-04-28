@@ -7,16 +7,16 @@
 "use strict";
 
 import React                                            from "react-native";
-import { ScrollView, Text, View }                       from "react-native";
-
+import { Text, View }                                   from "react-native";
+import { PageContainer }                                from "../../components/containers";
 
 class Info extends React.Component {
 
     render() {
         return (
-            <ScrollView>
+            <PageContainer>
                 <Text>Player Info</Text>
-            </ScrollView>
+            </PageContainer>
         );
     };
 

@@ -8,7 +8,8 @@
 
 import React                                                      from "react-native";
 import { StyleSheet, TouchableOpacity, Text }                     from "react-native";
-import ButtonStyle                                                from "../styles/button";
+import { ButtonStyle }                                            from "../../styles/widgets";
+import { Actions }                                                from "react-native-router-flux";
 
 
 class Button extends React.Component {
@@ -16,19 +17,13 @@ class Button extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            page: props.page,
-            navigator: props.navigator
+            page: props.page
         };
-
-    };
-
-    handleNavigation() {
-        this.state.navigator.push({id: this.state.page});
     };
 
     render() {
         return (
-            <TouchableOpacity onPress={this.handleNavigation.bind(this)} style={ButtonStyle.btn}>
+            <TouchableOpacity onPress={Actions.profile} style={ButtonStyle.btn}>
                 <Text style={ButtonStyle.text}>{this.props.text}</Text>
             </TouchableOpacity>
         );
