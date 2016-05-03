@@ -17,21 +17,13 @@ class PageContainer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: props.title,
-            showHeader: props.showHeader,
             enableScroll: props.hasOwnProperty("enableScroll") ? (props.enableScroll == "true") : true
         };
-    };
-
-    handleHeader() {
-        if (this.state.showHeader === "true")
-            return <Header text={this.state.title}/>;
     };
 
     render() {
         return (
             <View style={PageContainerStyle.mainContainer}>
-                {this.handleHeader()}
                 <ScrollView scrollEnabled={this.state.enableScroll}>
                     {this.props.children}
                 </ScrollView>

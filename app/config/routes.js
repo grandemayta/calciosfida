@@ -6,20 +6,19 @@
 
 "use strict";
 
-import React                                from "react-native";
-import { Scene, Router }                    from "react-native-router-flux";
-import * as Features                        from "../features";
-import { Header }                           from "../components/widgets";
+import React                                          from "react-native";
+import { Scene, Router }                              from "react-native-router-flux";
+import Features                                       from "../features/features.module";
 
 
 class Routes extends React.Component {
 
     render() {
+
         return (
             <Router>
                 <Scene key="root" hideNavBar="true">
-                    <Scene key="home" component={Features.Home}/>
-                    <Scene key="profile" component={Features.TabProfile}/>
+                    { Features.map((feature) => feature) }
                 </Scene>
             </Router>
         );

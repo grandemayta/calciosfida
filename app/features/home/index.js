@@ -6,7 +6,16 @@
 
 "use strict";
 
-import Home                      from "./home";
+import React                            from "react-native";
+import { Scene }                        from "react-native-router-flux";
+import { Header }                       from "../../components/widgets";
+import Home                             from "./scenes/home";
 
 
-export { Home };
+export default (
+
+    <Scene key="home" navBar={Header}>
+        <Scene key="homemain" component={Home}/>
+    </Scene>
+
+);

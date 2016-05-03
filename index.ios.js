@@ -6,9 +6,9 @@
 
 "use strict";
 
-import React                                from "react-native";
-import { AppRegistry }                      from "react-native";
-import { Routes }                           from "./app/config";
+import React                                    from "react-native";
+import { AppRegistry }                          from "react-native";
+import { Routes }                               from "./app/config/config.module";
 
 
 AppRegistry.registerComponent("calciosfida", () => Routes);

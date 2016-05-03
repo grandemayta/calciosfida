@@ -23,7 +23,7 @@ class Button extends React.Component {
 
     render() {
         return (
-            <TouchableOpacity onPress={Actions.profile} style={ButtonStyle.btn}>
+            <TouchableOpacity onPress={Actions[this.state.page]} style={ButtonStyle.btn}>
                 <Text style={ButtonStyle.text}>{this.props.text}</Text>
             </TouchableOpacity>
         );

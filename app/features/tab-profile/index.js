@@ -6,7 +6,13 @@
 
 "use strict";
 
-import TabProfile                      from "./tab-profile";
+import React                            from "react-native";
+import { Scene }                        from "react-native-router-flux";
+import TabProfile                       from "./scenes/tab-profile";
 
 
-export { TabProfile };
+export default (
+
+    <Scene key="profile" component={TabProfile}/>
+
+);

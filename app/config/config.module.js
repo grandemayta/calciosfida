@@ -6,6 +6,7 @@
 
 "use strict";
 
-import Routes                    from "./routes";
+import Routes                                from "./routes";
+
 
 export { Routes };

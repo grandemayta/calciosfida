@@ -16,12 +16,12 @@ class Spacer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: props.value
+            size: props.size
         };
     };
 
     setHeight() {
-        switch (this.state.value) {
+        switch (this.state.size) {
             case "10":
                 return SpacerStyle._10;
             case "20":

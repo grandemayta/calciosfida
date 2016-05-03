@@ -8,18 +8,18 @@
 
 import React                                            from "react-native";
 import { Text, View }                                   from "react-native";
-import { PageContainer }                                from "../../components/containers";
+import { PageContainer }                                from "../../../components/containers";
 
-class Card extends React.Component {
+class Info extends React.Component {
 
     render() {
         return (
             <PageContainer>
-                <Text>Player Card</Text>
+                <Text>Player Info</Text>
             </PageContainer>
         );
     };
 
 }
 
-export default Card;
+export default Info;

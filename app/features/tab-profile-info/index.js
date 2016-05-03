@@ -6,7 +6,13 @@
 
 "use strict";
 
-import Info                      from "./info";
+import React                            from "react-native";
+import { Scene }                        from "react-native-router-flux";
+import Info                             from "./scenes/info";
 
 
-export { Info };
+export default (
+
+    <Scene key="info" component={Info}/>
+
+);

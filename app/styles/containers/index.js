@@ -6,7 +6,8 @@
 
 "use strict";
 
+import MainContainerStyle                               from "./main-container";
 import PageContainerStyle                               from "./page-container";
 
 
-export { PageContainerStyle };
+export { MainContainerStyle, PageContainerStyle };
