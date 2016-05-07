@@ -8,7 +8,7 @@
 
 import React                                    from "react-native";
 import { AppRegistry }                          from "react-native";
-import { Routes }                               from "./app/config/config.module";
+import { Routes }                               from "./app/config";
 
 
 AppRegistry.registerComponent("calciosfida", () => Routes);

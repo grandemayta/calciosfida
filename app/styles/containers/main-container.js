@@ -11,15 +11,12 @@ import { StyleSheet }               from "react-native";
 
 
 let MainContainerStyle = StyleSheet.create({
+
     container: {
         flex: 1,
-        flexDirection: "row",
-        backgroundColor: "#FFFFFF"
-    },
-    pageContainer: {
-        marginTop: 64
+        flexDirection: "column"
     }
-    
+
 });
 
 

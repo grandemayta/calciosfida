@@ -6,8 +6,9 @@
 
 "use strict";
 
+import MainContainer                                from "./main-container";
+import TabContainer                                 from "./tab-container";
 import PageContainer                                from "./page-container";
-import TabContainer                                from "./tab-container";
 
 
-export { PageContainer, TabContainer };
+export { MainContainer, TabContainer, PageContainer };

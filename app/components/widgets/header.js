@@ -14,12 +14,16 @@ import Icon                                                       from "react-na
 
 class Header extends React.Component {
 
+    static propTypes = {
+        title: React.PropTypes.string.isRequired
+    };
+
     render() {
         return (
             <View>
                 <View style={HeaderStyle.container}>
                     <Icon style={HeaderStyle.button} name="chevron-left" size={26} color="#FFFFFF"/>
-                    <Text style={HeaderStyle.text}>{this.props.text}</Text>
+                    <Text style={HeaderStyle.text}>{this.props.title}</Text>
                     <Icon style={HeaderStyle.button} name="bars" size={26} color="#FFFFFF"/>
                 </View>
             </View>

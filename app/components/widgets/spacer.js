@@ -6,22 +6,18 @@
 
 "use strict";
 
-import React                                                      from "react-native";
-import { StyleSheet, View }                                       from "react-native";
+import React, { Component, View }                                 from "react-native";
 import { SpacerStyle }                                            from "../../styles/widgets";
 
 
-class Spacer extends React.Component {
+class Spacer extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            size: props.size
-        };
+    static propTypes = {
+        size: React.PropTypes.string.isRequired
     };
 
     setHeight() {
-        switch (this.state.size) {
+        switch (this.props.size) {
             case "10":
                 return SpacerStyle._10;
             case "20":

@@ -6,17 +6,16 @@
 
 "use strict";
 
-import React                                         from "react-native";
-import { View, Text }                                from "react-native";
+import React, { Component, View, Text }              from "react-native";
 import { PageContainer }                             from "../../../components/containers";
 import { Button, Spacer }                            from "../../../components/widgets";
 
 
-class Home extends React.Component {
+class Home extends Component {
 
     render() {
         return (
-            <PageContainer enableScroll="false">
+            <PageContainer>
                 <Button page="profile" text="Profilo"/>
                 <Spacer size="30"/>
                 <Button page="info" text="Squadra"/>

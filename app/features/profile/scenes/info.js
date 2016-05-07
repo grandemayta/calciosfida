@@ -6,15 +6,18 @@
 
 "use strict";
 
-import React                                            from "react-native";
-import { Text, View }                                   from "react-native";
+import React, { Component, Text, View }                 from "react-native";
 import { PageContainer }                                from "../../../components/containers";
 
-class Info extends React.Component {
+class Info extends Component {
+
+    static defaultProps = {
+        enableScroll: true
+    };
 
     render() {
         return (
-            <PageContainer>
+            <PageContainer enableScroll={this.props.enableScroll}>
                 <Text>Player Info</Text>
             </PageContainer>
         );

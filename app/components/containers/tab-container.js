@@ -6,24 +6,16 @@
 
 "use strict";
 
-import React                                                      from "react-native";
-import { ScrollView }                                             from "react-native";
+import React, { Component, ScrollView }                           from "react-native";
 import ScrollableTabView                                          from "react-native-scrollable-tab-view";
 import { Header }                                                 from "../../components/widgets";
 
 
-class TabContainer extends React.Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            title: props.title
-        };
-    };
+class TabContainer extends Component {
 
     render() {
         return (
-            <ScrollableTabView >
+            <ScrollableTabView>
                 {this.props.children}
             </ScrollableTabView>
         );

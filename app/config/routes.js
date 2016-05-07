@@ -6,15 +6,14 @@
 
 "use strict";
 
-import React                                          from "react-native";
+import React, { Component }                           from "react-native";
 import { Scene, Router }                              from "react-native-router-flux";
-import Features                                       from "../features/features.module";
+import Features                                       from "../features";
 
 
-class Routes extends React.Component {
+class Routes extends Component {
 
     render() {
-
         return (
             <Router>
                 <Scene key="root" hideNavBar="true">

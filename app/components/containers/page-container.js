@@ -6,25 +6,25 @@
 
 "use strict";
 
-import React                                                      from "react-native";
-import { ScrollView, View }                                       from "react-native";
+import React, { Component, ScrollView, View }                     from "react-native";
 import { Header }                                                 from "../../components/widgets";
 import { PageContainerStyle }                                     from "../../styles/containers";
 
 
-class PageContainer extends React.Component {
+class PageContainer extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            enableScroll: props.hasOwnProperty("enableScroll") ? (props.enableScroll == "true") : true
-        };
+    static propTypes = {
+        enableScroll: React.PropTypes.bool
+    };
+
+    static defaultProps = {
+        enableScroll: false
     };
 
     render() {
         return (
             <View style={PageContainerStyle.mainContainer}>
-                <ScrollView scrollEnabled={this.state.enableScroll}>
+                <ScrollView scrollEnabled={this.props.enableScroll}>
                     {this.props.children}
                 </ScrollView>
             </View>

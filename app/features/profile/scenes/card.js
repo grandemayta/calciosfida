@@ -6,15 +6,18 @@
 
 "use strict";
 
-import React                                            from "react-native";
-import { Text, View }                                   from "react-native";
+import React, { Component, Text, View }                 from "react-native";
 import { PageContainer }                                from "../../../components/containers";
 
-class Card extends React.Component {
+class Card extends Component {
+
+    static defaultProps = {
+        enableScroll: true
+    };
 
     render() {
         return (
-            <PageContainer>
+            <PageContainer enableScroll={this.props.enableScroll}>
                 <Text>Player Card</Text>
             </PageContainer>
         );
